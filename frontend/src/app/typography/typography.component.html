@@ -10,23 +10,21 @@
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th># Factura</th>
-                  <th>Cliente</th>
-                  <th>Fecha</th>
-                  <th>Vendedor</th>
-                  <th>Total</th>
+                  <th>numero cliente</th>
+                  <th>nombres cliente</th>
+                  <th>apellidos cliente</th>
+                  <th>cedula cliente</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>2</td>
-                  <td>Andrew Ramirez</td>
-                  <td>16/11/2022</td>
-                  <td>Bmed</td>
-                  <td>23</td>
+                <tr *ngFor="let persona of personas">
+                  <td>{{persona.numberClient}}</td>
+                  <td>{{persona.nameClient}}</td>
+                  <td>{{persona.lastNameClient}}</td>
+                  <td>{{persona.numberIdentification}}</td>
                   <td>
-                    <a class="btn btn-info btn-block">Edit</a>
-                    <a class="btn btn-danger btn-block">Delete</a>
+                    <a [routerLink]="['/icons/edit', persona.id]" class="btn btn-info btn-block">Edit</a>
+                    <a class="btn btn-danger btn-block" (click)="deletePerson(persona.id)">Delete</a>
                   </td>
                 </tr>
               </tbody>

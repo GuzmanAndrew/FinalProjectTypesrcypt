@@ -33,7 +33,6 @@ public class VentaController {
         ventaId = ventaService.ventaId(id);
         return ventaId;
     }
-
     @PutMapping("/actualizar/{id}")
     public Venta actualizarCliente(@PathVariable(name = "id") Long id, @RequestBody Venta venta) {
         Venta ventaSelect = new Venta();

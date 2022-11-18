@@ -9,28 +9,28 @@
                <div class="card-body">
                   <table class="table table-striped">
                      <thead>
-                       <tr>
-                         <th>id factura</th>
-                         <th>numero factura</th>
-                         <th>codigo producto</th>
-                         <th>cantidad</th>
-                         <th>importante</th>
-                       </tr>
+                        <tr>
+                           <th>id factura</th>
+                           <th>numero factura</th>
+                           <th>codigo producto</th>
+                           <th>cantidad</th>
+                           <th>importante</th>
+                        </tr>
                      </thead>
                      <tbody>
-                       <tr *ngFor="let persona of personas">
-                        <td>{{persona.id}}</td>
-                        <td>{{persona.numberInvoice}}</td>
-                        <td>{{persona.codeProduct}}</td>
-                        <td>{{persona.amount}}</td>
-                        <td>{{persona.important}}</td>
-                         <td>
-                           <a [routerLink]="['/maps/edit', persona.id]" class="btn btn-info btn-block">Edit</a>
-                           <a class="btn btn-danger btn-block">Delete</a>
-                         </td>
-                       </tr>
+                        <tr *ngFor="let persona of personas">
+                           <td>{{persona.id}}</td>
+                           <td>{{persona.numberInvoice}}</td>
+                           <td>{{persona.codeProduct}}</td>
+                           <td>{{persona.amount}}</td>
+                           <td>{{persona.important}}</td>
+                           <td>
+                              <a [routerLink]="['/maps/edit', persona.id]" class="btn btn-info btn-block">Edit</a>
+                              <a class="btn btn-danger btn-block" (click)="deletePerson(persona.id)">Delete</a>
+                           </td>
+                        </tr>
                      </tbody>
-                   </table>
+                  </table>
                </div>
             </div>
          </div>

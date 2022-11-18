@@ -40,7 +40,7 @@ export class IconsComponent implements OnInit {
     this.service.createPersona(this.persona).subscribe(
       res => {
         console.log(res);
-        this.router.navigate(['/person']);
+        this.router.navigate(['/user-profile']);
       },
       err => console.error(err)
     );
@@ -50,7 +50,7 @@ export class IconsComponent implements OnInit {
     this.service.updatePersona(this.persona.id, this.persona).subscribe(
       res => {
         console.log(res);
-        this.router.navigate(['/person']);
+        this.router.navigate(['/user-profile']);
       },
       err => console.error(err)
     );

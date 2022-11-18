@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FacturaServiceService } from '../services/factura-service.service';
+import { VentaServiceService } from '../services/venta-service.service';
 
 @Component({
   selector: 'app-table-list',
@@ -10,7 +10,7 @@ export class TableListComponent implements OnInit {
 
   personas: any = [];
 
-  constructor(private service: FacturaServiceService) { }
+  constructor(private service: VentaServiceService) { }
 
   ngOnInit() {
     this.getPersons();

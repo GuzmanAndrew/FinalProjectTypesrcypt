@@ -9,19 +9,20 @@
                <div class="card-body">
                   <form>
                      <div class="form-group">
-                        <input type="text" name="apellidos" placeholder="numero factura" class="form-control">
+                        <input type="text" name="numberInvoice" [(ngModel)]="persona.numberInvoice" placeholder="numero factura" class="form-control">
                      </div>
                      <div class="form-group">
-                        <input type="text" name="direccion" placeholder="codigo producto" class="form-control">
+                        <input type="text" name="codeProduct" [(ngModel)]="persona.codeProduct" placeholder="codigo producto" class="form-control">
                      </div>
                      <div class="form-group">
-                        <input type="text" name="procesado" placeholder="cantidad" class="form-control">
+                        <input type="text" name="amount" [(ngModel)]="persona.amount" placeholder="cantidad" class="form-control">
                      </div>
                      <div class="form-group">
-                        <input type="text" name="procesado" placeholder="importante" class="form-control">
+                        <input type="text" name="important" [(ngModel)]="persona.important" placeholder="importante" class="form-control">
                      </div>
-                     <button mat-raised-button type="submit" class="btn btn-danger pull-right">Crear cliente</button>
-                     <div class="clearfix"></div>
+                     <button class="btn btn-success btn-block" (click)="edit ? updatePerson() : savePerson()">
+                        Guardar
+                     </button>
                   </form>
                </div>
             </div>
