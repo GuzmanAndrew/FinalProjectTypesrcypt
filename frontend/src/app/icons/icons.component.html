@@ -1,0 +1,40 @@
+<div class="main-content">
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="card">
+               <div class="card-header card-header-danger">
+                  <h4 class="card-title">Crear Factura</h4>
+               </div>
+               <div class="card-body">
+                  <form>
+                     <div class="form-group">
+                        <input type="text" name="nombre" [(ngModel)]="persona.numberInvoice"
+                           placeholder="Numero de factura" class="form-control" autofocus>
+                     </div>
+                     <div class="form-group">
+                        <input type="text" name="apellidos" [(ngModel)]="persona.nameClient" placeholder="cliente"
+                           class="form-control">
+                     </div>
+                     <div class="form-group">
+                        <input type="text" name="direccion" [(ngModel)]="persona.dateCreate" placeholder="Fecha"
+                           class="form-control">
+                     </div>
+                     <div class="form-group">
+                        <input type="text" name="procesado" [(ngModel)]="persona.seller" placeholder="Vendedor"
+                           class="form-control">
+                     </div>
+                     <div class="form-group">
+                        <input type="text" name="procesado" [(ngModel)]="persona.total" placeholder="Total"
+                           class="form-control">
+                     </div>
+                     <button class="btn btn-success btn-block" (click)="edit ? updatePerson() : savePerson()">
+                        Guardar
+                     </button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
